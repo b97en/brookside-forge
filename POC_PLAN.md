@@ -1,5 +1,10 @@
 # Brookside Forge POC — Session Plan
 
+> **Status:** the build is done and the loop runs end to end. Session 11 below
+> was added along the way. The playtest itself, which is Session 10's question,
+> is still to run. This file is the original plan, kept for reference. For the
+> current state, see [README.md](README.md) and [TODO.md](TODO.md).
+
 Ten Claude Code sessions over roughly two weeks. Each session is one sitting
 (60–120 min of your time), ends with a working build and a git commit. If a
 session overruns, stop and split it — don't push into untested territory.
@@ -56,6 +61,8 @@ actually own — which directly shapes Sessions 2, 4, and 9.*
   or "generic dungeon town"? Either answer is fine for the POC, but record
   the verdict: it determines whether the full game can ship on these packs
   or needs an art budget later.
+- **Verdict:** it reads more fantasy than Yorkshire. This is still an open
+  question in TODO.md.
 
 ## Session 3 — Interaction system ★ (design only)
 
@@ -122,6 +129,8 @@ actually own — which directly shapes Sessions 2, 4, and 9.*
 - Strict timebox: one session. If it's not done, the pack placeholder ships
   in the POC.
 - **Done when:** the items you forge look like *your* game's items.
+- **Outcome:** the audit found the packs cover the anvil, fire and ore rock.
+  The notice board and forged-item sprites are still gaps (see TODO.md).
 
 ## Session 10 — Playtest build
 
@@ -129,6 +138,13 @@ actually own — which directly shapes Sessions 2, 4, and 9.*
   own success metric). Watch them play the loop without explaining anything.
 - The POC question to answer: did they smile during the mini-game, and did
   they forge a second item without being asked?
+
+## Session 11 — Loop extension (added after the plan)
+
+- Gave the player a reason to forge a second item. Three commissions (scythe →
+  horseshoes → gate hinges) cycle through the board, with per-item ore recipes
+  in `data/items.json`.
+- Mining got a swing animation and floating "+1 Iron Ore" pickup text.
 
 ---
 

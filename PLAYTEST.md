@@ -2,17 +2,15 @@
 
 ## Running the build
 
-Open the project in Godot 4.6 and press F5, or from a terminal:
+Open the project in Godot 4.6 and press F5, or run `godot --path .` from the
+repo root.
 
-```
-godot --path .
-```
+To start from a clean slate, delete the save file first:
 
-(Your Godot is at `Downloads\Godot_v4.6.3-stable_win64.exe\`.)
+- Windows: `%APPDATA%\Godot\app_userdata\Brookside Forge POC\save.json`
+- Linux: `~/.local/share/godot/app_userdata/Brookside Forge POC/save.json`
 
-To start from a clean slate, delete the save first:
-`%APPDATA%\Godot\app_userdata\Brookside Forge POC\save.json`.
-On a fresh start a one-line controls hint appears at the bottom of the screen.
+A fresh start shows a one-line controls hint at the bottom of the screen.
 
 ## The loop under test
 
@@ -35,16 +33,17 @@ On a fresh start a one-line controls hint appears at the bottom of the screen.
 
 - Do they find the notice board and understand E-prompts unaided?
 - **Did they smile during the mini-game?** (the POC's success metric)
-- **Did they forge a second item without being asked?** The board now gives
-  them a reason to — watch whether they go back to it on their own.
+- **Did they forge a second item without being asked?** The board always has
+  a next job, so watch whether they go back to it on their own.
 - Where did they get lost or stop — that's the next thing to fix.
 
-## Known soft spots
+## Tuning after a session
 
-- Movement speed, mini-game speed/windows are all tunable
-  (`scenes/player.gd` SPEED; ForgeMinigame exports in the inspector).
+- Movement speed is `SPEED` in `scenes/player.gd`. Mini-game strike count,
+  speed and timing windows are exports on the ForgeMinigame node.
 - Commission text, rewards and ore costs live in `data/commissions.json` and
-  `data/items.json` — tune pay/cost there, no code changes needed.
-- Forged quality is tracked for the most recent item only (one commission at a
-  time, so it never matters in play).
-- Notice board is placeholder art (see TODO.md).
+  `data/items.json`, so no code changes are needed.
+- Only the most recent forged item's quality is tracked. There's one commission
+  at a time, so this never matters in play.
+
+Known art and audio gaps are listed in [TODO.md](TODO.md).

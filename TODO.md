@@ -1,33 +1,38 @@
 # TODO
 
-## Session 9 art audit (what the packs cover vs. genuine gaps)
+## Open question: art direction
 
-**Covered by owned packs (no custom art needed):**
-- Anvil station — free_pack `Stations/Anvil/Anvil.png` (in use)
-- Furnace + forge fire — free_pack `Stations/Furnace` + `Bonfire/Fire_01-Sheet` (in use)
-- Ore node — free_pack `Props/Static/Rocks.png` (in use)
-- Player, NPC, village/interior tiles — in use
+Pixel Crawler leans fantasy-dungeon, and the village reads more fantasy than
+post-war Yorkshire. That's fine for the POC, but it decides whether the full
+game can ship on these packs or needs an art budget.
 
-**Genuine gaps (custom art candidates, strictly optional for the POC):**
-- **Notice board sprite** — nothing suitable in free_pack Props/Tools.
-  Currently a ColorRect-assembled placeholder in `scenes/notice_board.tscn`
-  that reads acceptably. To replace: ~32x28 px, palette matched to free_pack
-  browns; drop into the tscn as a Sprite2D and delete the ColorRects.
-- **Forged item sprites** (scythe, horseshoes, gate hinges; later the katana-influenced blades) —
-  the East-meets-West objects no fantasy pack has. Inventory is text-only in
-  the POC, so this only matters if we add an "item get" popup or delivery
-  visual. `forge/Weapons/Fire Weapons.png` works as a stand-in for blades.
+## Art gaps
 
-## Other
+The owned packs already cover the anvil, furnace and forge fire, ore rock,
+player, NPC, and village and interior tiles. The remaining gaps are
+optional for the POC:
 
-- WAV SFX are procedurally generated placeholders (tools session 8 PowerShell).
-  Replace with Kenney/freesound picks if they grate — check licences.
+- **Notice board sprite.** Nothing suitable in free_pack Props/Tools. It's
+  currently built from ColorRects in `scenes/notice_board.tscn` and reads
+  acceptably. To replace it, make a ~32×28 px sprite in the free_pack browns,
+  add it as a Sprite2D and delete the ColorRects.
+- **Forged item sprites** (scythe, horseshoes, gate hinges, and later the
+  katana-influenced blades). No fantasy pack has these East-meets-West objects.
+  Inventory is text-only, so this only matters if we add an "item get" popup
+  or a delivery visual. `forge/Weapons/Fire Weapons/Fire Weapons.png` works as
+  a stand-in for blades.
 
-## Session 11 (loop extension) — follow-ups
+## Audio
 
-- Mining uses the free_pack `Collect_Base` swing. If a proper pick-swing
-  reads better, `Crush_Base` (8 frames, same layout) is a drop-in: change the
+- The WAV SFX in `assets/audio/` are procedurally generated placeholders (from
+  a one-off PowerShell script in session 8, not kept in the repo). Swap in
+  Kenney or freesound picks if they grate, and check the licences.
+
+## Gameplay follow-ups
+
+- Mining uses the free_pack `Collect_Base` swing. If a proper pick-swing reads
+  better, `Crush_Base` (8 frames, same layout) is a drop-in: change the
   `player_animation` export on `scenes/ore_node.tscn` and add the frames to
   `scenes/player.tscn` the same way as `collect_*`.
-- The ore rock is still infinite and instant apart from the swing. If
+- The ore rock never runs out, and mining is instant apart from the swing. If
   playtesters never leave the rock, add a short "picked clean" cooldown.

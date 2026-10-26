@@ -22,7 +22,13 @@ func _on_interact() -> void:
 	_pending_item = item_id
 	var minigame: ForgeMinigame = MINIGAME_SCENE.instantiate()
 	minigame.item_name = DataLoader.item_name(item_id)
-	get_tree().current_scene.add_child(minigame)
+	# Own screen-space layer (above the HUD) so the overlay ignores the camera;
+	# the layer goes when the mini-game frees itself.
+	var layer := CanvasLayer.new()
+	layer.layer = 2
+	layer.add_child(minigame)
+	minigame.tree_exited.connect(layer.queue_free)
+	get_tree().current_scene.add_child(layer)
 	minigame.finished.connect(_on_forged)
 
 

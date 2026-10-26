@@ -1,8 +1,9 @@
 # Asset packs — sheet layout reference
 
 Pixel Crawler packs by Anokolisa (itch.io, paid licence). **Do not redistribute.**
-This folder is gitignored except for this README. Original zips and unused packs
-live in `_archive/` (outside the Godot import, outside git).
+These files are committed only because the repo is private. Original zips and
+unused packs live in `_archive/`, which has a `.gdignore` so Godot doesn't
+import them (it is still in git).
 
 **Globals:**
 - Tile grid: **16×16** everywhere.
@@ -75,7 +76,7 @@ the forge building exterior in the village.
 - `Assets/Tiles.png` (400×400, 16×16) — **forge interior tileset** (stone,
   lava-glow accents). The main reason this pack is here.
 - `Weapons/Fire Weapons/Fire Weapons.png` — glowing forged-weapon sprites,
-  candidates for forged-item art before Session 9 customs.
+  stand-ins for forged-item art until custom sprites exist.
 - `Enemy/` (stone golems) and `Social/` (cover art) — not needed.
 - `Terms.txt` — licence terms, worth a skim.
 
