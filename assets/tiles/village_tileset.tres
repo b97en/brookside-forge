@@ -1,0 +1,39 @@
+[gd_resource type="TileSet" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/packs/free_pack/Environment/Tilesets/Floors_Tiles.png" id="1_floors"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_floors"]
+texture = ExtResource("1_floors")
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_floors")

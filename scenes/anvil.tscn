@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/anvil.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/packs/free_pack/Environment/Structures/Stations/Anvil/Anvil.png" id="2_anvil"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anvil"]
+atlas = ExtResource("2_anvil")
+region = Rect2(0, 8, 72, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_range"]
+radius = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_block"]
+size = Vector2(60, 26)
+
+[node name="Anvil" type="Area2D"]
+script = ExtResource("1_script")
+prompt_text = "E - Forge"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_anvil")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_range")
+
+[node name="Blocker" type="StaticBody2D" parent="."]
+
+[node name="Shape" type="CollisionShape2D" parent="Blocker"]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_block")

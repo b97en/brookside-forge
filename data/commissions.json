@@ -1,0 +1,32 @@
+{
+	"farmer_scythe": {
+		"order": 1,
+		"title": "A scythe for the harvest",
+		"text": "The old blade went with the war. I need a new scythe before the hay's past saving. - T. Garside",
+		"npc": "farmer",
+		"item": "scythe",
+		"reward": { "poor": 15, "good": 40, "perfect": 70 },
+		"waiting_line": "Hay won't wait forever, smith. How's that scythe coming?",
+		"thanks": "Aye, that'll cut clean. Tha's done right by me."
+	},
+	"farmer_horseshoes": {
+		"order": 2,
+		"title": "Shoes for the mare",
+		"text": "Bess has thrown a shoe and the hay cart's going nowhere. A set of four, if tha can. - T. Garside",
+		"npc": "farmer",
+		"item": "horseshoes",
+		"reward": { "poor": 10, "good": 25, "perfect": 45 },
+		"waiting_line": "Mare's stood three-legged in t'yard. Them shoes?",
+		"thanks": "Grand. She'll be pulling again by morning."
+	},
+	"farmer_gate_hinges": {
+		"order": 3,
+		"title": "Hinges for the top gate",
+		"text": "Top gate's hanging off and the ewes know it. Two stout hinges before they're all on the moor. - T. Garside",
+		"npc": "farmer",
+		"item": "gate_hinges",
+		"reward": { "poor": 12, "good": 32, "perfect": 55 },
+		"waiting_line": "Lost two ewes up the fell already. Hinges, lad.",
+		"thanks": "That gate'll outlast me now. Much obliged."
+	}
+}

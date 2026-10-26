@@ -1,0 +1,6 @@
+{
+	"iron_ore": { "name": "Iron Ore" },
+	"scythe": { "name": "Scythe", "base_value": 40, "recipe": { "iron_ore": 2 } },
+	"horseshoes": { "name": "Horseshoes", "base_value": 20, "recipe": { "iron_ore": 1 } },
+	"gate_hinges": { "name": "Gate Hinges", "base_value": 30, "recipe": { "iron_ore": 2 } }
+}
